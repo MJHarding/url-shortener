@@ -56,8 +56,6 @@ Access ReDoc at: `http://localhost:8000/redoc`
 - `POST /upload/`: Upload a file and get a short link
 - `GET /{short_id}`: Redirect to original URL or file
 
-### System
-- `GET /health`: Health check endpoint
 
 ## Configuration
 - AWS LocalStack is used for local development

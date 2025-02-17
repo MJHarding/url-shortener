@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .api import shortcode, user
+from .api import shortcode
 
 app = FastAPI(
     title="URL Shortener API",
@@ -26,7 +26,6 @@ app.add_middleware(
 
 # Include routers
 app.include_router(shortcode.router, tags=["URL Shortening"])
-app.include_router(user.router, prefix="/user", tags=["User"])
 
 # Optional: Add a health check endpoint
 @app.get("/health", tags=["System"])

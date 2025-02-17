@@ -1,9 +1,8 @@
 import uuid
 import logging
-import boto3
 from botocore.exceptions import ClientError
 from .core import dynamodb, s3_client, BUCKET_NAME
-from typing import List, Dict
+from typing import Dict
 from datetime import datetime
 
 def generate_short_id():

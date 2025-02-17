@@ -1,3 +1,3 @@
-from . import shortcode, user
+from . import shortcode
 
-__all__ = ["shortcode", "user"]
+__all__ = ["shortcode"]

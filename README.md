@@ -39,6 +39,10 @@ localstack start
 ### Development Server
 ```bash
 uvicorn app.main:app --reload
+
+OR 
+
+cd url-shortener/app && fastapi run main.py
 ```
 
 ### API Documentation
@@ -51,9 +55,6 @@ Access ReDoc at: `http://localhost:8000/redoc`
 - `POST /shorten/url/`: Create a shortened URL
 - `POST /upload/`: Upload a file and get a short link
 - `GET /{short_id}`: Redirect to original URL or file
-
-### User
-- `POST /user/register`: Placeholder user registration
 
 ### System
 - `GET /health`: Health check endpoint

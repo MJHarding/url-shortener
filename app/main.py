@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .api import shortcode
 
+
 app = FastAPI(
     title="URL Shortener API",
     description="A FastAPI-based URL shortening service with file upload capabilities",
@@ -26,14 +27,3 @@ app.add_middleware(
 
 # Include routers
 app.include_router(shortcode.router, tags=["URL Shortening"])
-
-# Optional: Add a health check endpoint
-@app.get("/health", tags=["System"])
-async def health_check():
-    """
-    Health check endpoint to verify the application is running.
-    
-    Returns:
-    - status: Current status of the application
-    """
-    return {"status": "healthy"}
